@@ -13,7 +13,7 @@ def submit_form(): #name of the url on js
         server = smtplib.SMTP("smtp.gmail.com:587") #remember allow less secure app access on gmail
         server.starttls()
         server.login(user, password)
-        server.sendmail(user, user, message)
+        server.sendmail(user, user, message) #from, to, message
         server.quit()
 
         return render_template('thankyou.html') #or return ('', 204) if showing a message through js
